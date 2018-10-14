@@ -1,11 +1,27 @@
 
 const storage = require('electron-localstorage');
 // const storage = require('./localStorage');
+const path = require('path')
 
 initPage();
 initEvent();
+initPath();
 getAll();
 clear();
+
+
+function initPath() {
+  const pathele = document.getElementById('path');
+  const submitPath = document.getElementById('submitPath');
+  pathele.value = storage.getStoragePath();
+  submitPath.addEventListener('click', () => {
+    const p = document.getElementById('path');
+    if (p) {
+      storage.setStoragePath(path.join(__dirname, p.value));
+      alert('修改成功');
+    }
+  })
+}
 
 function initPage() {
   const userName = storage.getItem('userName');
