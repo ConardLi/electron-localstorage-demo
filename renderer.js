@@ -1,5 +1,6 @@
 
 const storage = require('electron-localstorage');
+// const storage = require('./localStorage');
 
 initPage();
 initEvent();
@@ -10,11 +11,11 @@ function initPage() {
   const userName = storage.getItem('userName');
   const passWord = storage.getItem('passWord');
   const indexPage = storage.getItem('indexPage');
-  const idDev = storage.getItem('idDev');
+  const isDev = storage.getItem('isDev');
   document.getElementById('userName').value = userName;
   document.getElementById('passWord').value = passWord;
   document.getElementById('indexPage').value = indexPage;
-  document.getElementById('idDev').value = idDev;
+  document.getElementById('isDev').value = isDev;
 }
 
 function initEvent() {
@@ -22,11 +23,11 @@ function initEvent() {
     const userName = document.getElementById('userName').value;
     const passWord = document.getElementById('passWord').value;
     const indexPage = document.getElementById('indexPage').value;
-    const idDev = document.getElementById('idDev').value;
+    const isDev = document.getElementById('isDev').value;
     storage.setItem('userName', userName);
     storage.setItem('passWord', passWord);
     storage.setItem('indexPage', indexPage);
-    storage.setItem('idDev', idDev);
+    storage.setItem('isDev', isDev);
     getAll();
     alert('保存成功');
   })
