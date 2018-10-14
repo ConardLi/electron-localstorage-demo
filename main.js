@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron')
-const storage = require('electron-localStorage');
+const storage = require('electron-localstorage');
 // const storage = require('./localStorage');
 
 let mainWindow;
