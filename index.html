@@ -4,6 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <title>electron-localStorage</title>
+  <style>
+    p{
+      border-bottom: 1px solid gray;
+    }
+    span{
+      display: block;
+    }
+    button{
+      padding: 5px 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,10 +23,16 @@
   <div>
     <p>同步存储</p>
     <div>
-      用户名：<input id="userName" type="text">
+      <span>用户名：</span> <input id="userName" type="text">
     </div>
     <div>
-      密码：<input id="passWord" type="text">
+      <span>密码：</span> <input id="passWord" type="text">
+    </div>
+    <div>
+      <span>程序首页：</span> <input id="indexPage" type="text">
+    </div>
+    <div>
+      <span>下次打开程序启动调试：</span> <input id="idDev" type="text">
     </div>
     <button id="submit">提交</button>
   </div>
